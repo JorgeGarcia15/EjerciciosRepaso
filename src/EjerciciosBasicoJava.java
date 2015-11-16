@@ -14,6 +14,13 @@ public class EjerciciosBasicoJava extends ConsoleProgram {
 		println(multa (65,	false));
 		println(multa (65,	true));
 		
+		println(muyVanidoso (22));
+		println(muyVanidoso (23));
+		println(muyVanidoso (24));
+		
+		println(contesta (false, false, false));
+		println(contesta (false, false, true));
+		println(contesta (true,	false, false));
 	}
 	
 	public boolean fiestaArdillas(int Bellotas, boolean Festivo){
@@ -54,6 +61,43 @@ public class EjerciciosBasicoJava extends ConsoleProgram {
 			}
 		}
 		return 10;
+		
+	}
+	
+	public boolean muyVanidoso (int Valor){
+		if(Valor%11==0 || Valor%11==1){
+			return true;
+			
+		}
+		return false;
+	}
+	
+	public boolean contesta (boolean matinal, boolean madre, boolean dormido){
+		
+		if(dormido){
+			
+			return false;			
+		}
+		if( matinal && !madre){
+			
+			return false;			
+		}
+		if( matinal && madre){
+			
+			return true;			
+		}
+		
+		return true;	
+						
+		
+		
+	}
+	
+	public boolean menorPor10 (int numero1, int numero2, int numero3){
+		if(numero1-numero2==10 ||numero1-numero3==10 ||numero2-numero3==10){
+			return true;
+		}
+		return false;
 		
 	}
 	
